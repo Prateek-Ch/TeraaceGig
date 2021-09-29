@@ -1,0 +1,56 @@
+<body>
+<h1> Products Page </h1>
+<% datas.forEach( p =>{ %>
+    <div>
+        <%= p.name %> <br>
+        <%= p.image %> <br>
+        <%= p.price %> <br>
+        <%= p.category %> <br>
+        <%= p.description %> <br>
+        <% for(i=0;i<p.attributes.length;i++) { %> <br>
+            <%= p.attributes[i].size %> 
+            <div style="background-color:<%= `${p.attributes[i].color}`%>; height: 40px;width: 40px; border-radius: 50%; "></div>
+            <%= p.attributes[i].countInStock %> 
+        <% } %>
+        <br> 
+        <%= p.rating %> <br> 
+        <%= p.reviews %> <br>
+    </div>
+  <% }) %>
+    <button id='rzp-button1'>Pay Now</button>
+ 
+<script src = "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  
+    axios.post('/order')
+    .then((info)=>{
+        console.log('From Axios to receive order id: ');
+        console.log(info);
+
+        var options = {
+        "key": "rzp_test_Pxt1TpjLGJU6ov", // Enter the Key ID generated from the Dashboard
+        "amount":50000,
+        "name": "TerraceGig",
+        "description": "Test Transaction",
+        "image": "https://example.com/your_logo",
+        "order_id": info.data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+        "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
+        "notes": {
+            "address": "Razorpay Corporate Office"
+        },
+        "theme": {
+            "color": "#3399cc"
+                }
+        };
+    var rzp1 = new Razorpay(options);
+    document.getElementById('rzp-button1').onclick = function(e){
+    console.log('clic');
+    rzp1.open();
+    e.preventDefault();
+    }
+}).catch(error => { 
+    console.log(error)
+});
+</script>
+</body>
