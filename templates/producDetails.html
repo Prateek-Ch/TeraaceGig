@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Terrace Gig</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/productDetails.css">
+
+</head>
+
+<body>
+
+  
+  <nav class="navbar navbar-inverse navbar-fixed-top" >
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <a href="" class="navbar-brand"><img src="/public/imgs/logo.png" alt="" srcset="" class="navlogo">
+        </a> 
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#somewhere1">Apparel</a></li>
+                <li><a href="#somewhere2">Home Decor</a></li>
+                <li><a href="#somewhere1">Collections</a></li>
+            </ul>
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#" id="cart">Cart <span class="badge">3</span></a></li>
+            </ul>
+        </div>
+    </div>
+  </nav>    
+
+  <div class="container-cart">
+    <div class="shopping-cart" style="display: none;">
+      <div class="shopping-cart-header">
+        <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+        <div class="shopping-cart-total">
+          <span class="lighter-text">Total:</span>
+          <span class="main-color-text">$2,229.97</span>
+        </div>
+      </div> 
+  
+      <ul class="shopping-cart-items">
+        <li class="clearfix">
+          <img src="/public/imgs/shirt1.png" alt="item1" />
+          <span class="item-name">Tshirt 1</span>
+          <span class="item-price">$84.99</span>
+          <span class="item-quantity">Quantity: 01</span>
+        </li>
+  
+        <li class="clearfix">
+          <img src="/public/imgs/shirt2.png" alt="item1" />
+          <span class="item-name">Tshirt2</span>
+          <span class="item-price">$12.99</span>
+          <span class="item-quantity">Quantity: 01</span>
+        </li>
+  
+       
+      </ul>
+  
+      <a href="#" class="button">Checkout</a>
+    </div>
+  </div>
+
+  <div class="containerr">
+    <div class="grid second-nav">
+      <div class="column-xs-12">
+       
+      </div>
+    </div>
+    <div class="grid product">
+      <div class="column-xs-12 column-md-7">
+        <div id="gallery" class="container-fluid preview">  
+ <div class="img1 img-responsive zoomArea zoom" id='ex1'>
+  <img id="NZoomImg" data-NZoomscale="2" src="/public/imgs/1.jpeg" class="img-responsive magnifiedImg"  >
+
+ </div>
+ <div class="img1 img-responsive zoom" id="ex2">
+  <img id="NZoomImg2" data-NZoomscale="2" src="/public/imgs/1_1.jpeg" class="img-responsive">
+
+ </div>
+
+ <div class="img1 img-responsive zoom" id="ex3">
+  <img id="NZoomImg3" data-NZoomscale="2" src="/public/imgs/1_2.jpeg" class="img-responsive">
+
+ </div>
+ <!-- <div class="img1 img-responsive zoom" id="ex4">
+  <img id="NZoomImg4" data-NZoomscale="2" src="/public/imgs/shirt4.png" class="card img-responsive">
+
+ </div>
+          -->
+        
+        </div>
+      </div>
+      <div class="column-xs-12 column-md-7 column-lg-5">
+        <div class="description">
+          - Upcycled
+          <br>
+          - Fabric : Chiffon
+          <br>
+          - Machine wash in gentle cycle.
+          <br>
+         
+      </div>
+      <div class="product-color">
+        <span>Color</span>
+ <br>
+        <!-- <div class="color-choose">
+          <div>
+            <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+            <label for="red"><span></span></label>
+          </div>
+          <div>
+            <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+            <label for="blue"><span></span></label>
+          </div>
+          <div>
+            <input data-image="black" type="radio" id="black" name="color" value="black">
+            <label for="black"><span></span></label>
+          </div>
+        </div> -->
+  <div class="colors">
+
+    
+<input type="radio" name="radio" id="radio-black">
+<label class="colour-box-black" for="radio-black">
+  
+</label>
+
+<input type="radio" name="radio" id="radio-brown" >
+
+<label class="colour-box-brown" for="radio-brown">
+  
+</label>
+
+<input type="radio" name="radio" id="radio-yellow">
+<label class="colour-box-yellow" for="radio-yellow">
+  
+</label>
+
+<input type="radio" name="radio" id="radio-green">
+<label class="colour-box-green" for="radio-green">
+  
+</label>
+
+<input type="radio" name="radio" id="radio-blue">
+<label class="colour-box-blue" for="radio-blue">
+  
+</label>
+</div>  
+      </div>
+        <h1>FRONT TIE BUTTERFLY TOP
+        </h1>
+        <h2>Rs.2695</h2>
+         <br>
+         <label for="sizes" style="border: none;">Size</label>
+        
+         <div class="select-size">
+          <input type="radio" name="s-size" id="small" checked/>
+          <input type="radio" name="s-size" id="medium" />
+          <input type="radio" name="s-size" id="large" />
+          <input type="radio" name="s-size" id="x-large" />
+          <input type="radio" name="s-size" id="xx-large" />
+        
+          <label for="small">XS-S</label>
+          <label for="medium">S-M</label>
+          <label for="large">M-L</label>
+          <label for="x-large">L-XL</label>
+        
+        </div>
+         <!-- <select name="sizes" id="size">
+           <option value="size-s" selected>S</option>
+
+           <option value="size-m">M</option>
+
+           <option value="size-l">L</option>
+
+           <option value="size-xl">XL</option>
+
+         </select> -->
+         <br> <br>
+        
+        <div class="uwu">
+          <button class="add-to-cart">Add To Cart</button>
+           <div class="stock" id="st">In Stock</div>
+        </div>
+
+        <br> <br>
+        
+          
+        
+      </div>
+    </div>
+
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+          </div>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+
+<div class="footer justify-content-center">
+ <div>@theterracegig</div>
+ <div>TerraceGig@Gmail.com</div>
+ <div>@theterracegig</div>
+</div>
+ 
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+<script src="/public/js/Nzoom.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+			$('#ex1').zoom();
+			$('#ex2').zoom();
+			$('#ex3').zoom();			 
+			$('#ex4').zoom();
+		});
+
+    $("body").on("click", "label", function(e) {
+  var getValue = $(this).attr("for");
+  var goToParent = $(this).parents(".select-size");
+  var getInputRadio = goToParent.find("input[id = " + getValue + "]");
+  console.log(getInputRadio.attr("id"));  
+});
+
+//   /*Size is  set in pixels... supports being written as: '250px' */
+// var magnifierSize = 100;
+
+// /*How many times magnification of image on page.*/
+// var magnification = 4;
+
+// function magnifier() {
+
+//   this.magnifyImg = function(ptr, magnification, magnifierSize) {
+//     var $pointer;
+//     if (typeof ptr == "string") {
+//       $pointer = $(ptr);
+//     } else if (typeof ptr == "object") {
+//       $pointer = ptr;
+//     }
+    
+//     if(!($pointer.is('img'))){
+//       alert('Object must be image.');
+//       return false;
+//     }
+
+//     magnification = +(magnification);
+
+//     $pointer.hover(function() {
+//       $(this).css('cursor', 'none');
+//       $('.magnify').show();
+//       //Setting some variables for later use
+//       var width = $(this).width();
+//       var height = $(this).height();
+//       var src = $(this).attr('src');
+//       var imagePos = $(this).offset();
+//       var image = $(this);
+
+//       if (magnifierSize == undefined) {
+//         magnifierSize = '150px';
+//       }
+
+//       $('.magnify').css({
+//         'background-size': width * magnification + 'px ' + height * magnification + "px",
+//         'background-image': 'url("' + src + '")',
+//         'width': magnifierSize,
+//         'height': magnifierSize
+//       });
+
+//       //Setting a few more...
+//       var magnifyOffset = +($('.magnify').width() / 2);
+//       var rightSide = +(imagePos.left + $(this).width());
+//       var bottomSide = +(imagePos.top + $(this).height());
+
+//       $(document).mousemove(function(e) {
+//         if (e.pageX < +(imagePos.left - magnifyOffset / 6) || e.pageX > +(rightSide + magnifyOffset / 6) || e.pageY < +(imagePos.top - magnifyOffset / 6) || e.pageY > +(bottomSide + magnifyOffset / 6)) {
+//           $('.magnify').hide();
+//           $(document).unbind('mousemove');
+//         }
+//         var backgroundPos = "" - ((e.pageX - imagePos.left) * magnification - magnifyOffset) + "px " + -((e.pageY - imagePos.top) * magnification - magnifyOffset) + "px";
+//         $('.magnify').css({
+//           'left': e.pageX - magnifyOffset,
+//           'top': e.pageY - magnifyOffset,
+//           'background-position': backgroundPos
+//         });
+//       });
+//     }, function() {
+
+//     });
+//   };
+
+//   this.init = function() {
+//     $('body').prepend('<div class="magnify"></div>');
+//   }
+
+//   return this.init();
+// }
+
+// var magnify = new magnifier();
+// magnify.magnifyImg('img', magnification, magnifierSize);
+
+
+
+
+
+// $(document).ready(function() {
+
+// $('.color-choose input').on('click', function() {
+//   var headphonesColor = $(this).attr('data-image');
+//   $('.active').fadeOut(500).removeClass('active');
+//   $('.left-column img[data-image = ' + headphonesColor + ']').fadeIn(250).addClass('active');
+//   $(this).addClass('active');
+// });
+
+
+// });
+
+$("select[name=l-size ]")
+    .on("click", changeEvent);
+
+function changeEvent(event){
+   document.getElementById('st').innerHTML = "<span class='out'>Out of Stock</span>"
+}
+
+$("select[name=s-size ]")
+    .on("click", changeEvent);
+
+function changeEvent(event){
+   document.getElementById('st').innerHTML = "<span class='out'>Out of Stock</span>"
+}
+
+$(document).on('change', 'select', function() {
+    console.log($(this).val()); 
+    if($(this).val() == "size-m"){
+      document.getElementById('st').innerHTML = "<span class='out'>Out of Stock</span>"
+
+    }
+
+    else if($(this).val() == "size-s") {
+      document.getElementById('st').innerHTML = "In Stock"
+
+    }
+    
+});
+
+
+$(document).ready(function() {
+
+  if($("#size").val() == "size-m"){
+      document.getElementById('st').innerHTML = "<span class='out'>Out of Stock</span>"
+
+    }
+
+    else if($("#size").val() == "size-s") {
+      document.getElementById('st').innerHTML = "In Stock"
+
+    }
+
+});
+
+(function(){
+ 
+ $("#cart").on("click", function() {
+   $(".shopping-cart").fadeToggle( "fast");
+ });
+ 
+})();
+
+
+  </script>
+
+</body>
+
+</html>

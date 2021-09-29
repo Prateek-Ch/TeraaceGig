@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Terrace Gig</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <style>
+       .navbar.affix {
+            top: 0;
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+
+   
+    </script>
+</head>
+
+<body>
+
+  <div class="container-fluid parallax" style="color:#fff;height:100vh;">
+    <div class="himg">
+
+
+      </div>
+  </div>
+  
+  <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="700">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <a href="" class="navbar-brand"><img src="/public/imgs/logo.png" alt="" srcset="" class="navlogo">
+        </a> 
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#somewhere1">Apparel</a></li>
+                <li><a href="#somewhere2">Home Decor</a></li>
+                <li><a href="#somewhere1">Collections</a></li>
+            </ul>
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </div>
+    </div>
+  </nav>    
+ <div class="video ">
+  <video autoplay muted loop id="myVideo">
+    <source src="/public/vid/videoplayback.mp4" type="video/mp4">
+  </video>
+ </div>
+ <div class="container">
+  <div class="side"></div>
+  <div class="article-0"></div>
+  <div class="article-1"></div>
+  <div class="article-2"></div>
+  <div class="article-3"></div>
+  <div class="article-4"></div>
+</div>
+
+<div class="footer justify-content-center">
+ <div>@theterracegig</div>
+ <div>TerraceGig@Gmail.com</div>
+ <div>@theterracegig</div>
+</div>
+    <script>
+        let height = window.innerHeight - 50;
+        let headerImg = document.getElementById("header-img");
+        headerImg.style.height = height + "px";
+
+        let nav = document.getElementById("affix-navbar");
+        nav.setAttribute("data-offset-top", height);
+
+        document.querySelectorAll('.item img').forEach((img) => {
+  // Ideally, we would know the image size or aspect ratio beforehand...
+  if (img.naturalHeight) {
+    setItemRatio.call(img);
+  } else {
+    img.addEventListener('load', setItemRatio);
+  }
+});
+
+function setItemRatio() {
+    this.parentNode.style.setProperty('--ratio', this.naturalHeight / this.naturalWidth);
+}
+
+    </script>
+
+</body>
+
+</html>
