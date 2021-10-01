@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/public/css/style.css">
-    <link rel="stylesheet" href="/public/css/allproducts.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/allproducts.css">
 
 </head>
 
@@ -27,7 +27,7 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-        <a href="" class="navbar-brand"><img src="/public/imgs/logo.png" alt="" srcset="" class="navlogo">
+        <a href="" class="navbar-brand"><img src="/imgs/logo.png" alt="" srcset="" class="navlogo">
         </a> 
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
@@ -57,115 +57,24 @@
     </div>
     <div class="grid product">
       <div class="column-xs-12 ">
-
-<div id="gallery" class="container-fluid "> 
-   <div class="product">
-    <img src="/public/imgs/shirt1.png" class="img-border" style="border-color: #8A0204;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
+<% datas.forEach( data =>{ %>
+<div id="gallery" class="container-fluid ">
+    <% data.forEach(function(p) { %> 
+    <div class="row">  
+    <div class="product">
+    <img class="img-border" style="border-color: #8A0204;" src="data:image/<%=p.img.contentType%>;base64,<%=p.img.data.toString('base64')%>"/></a>
+    <div class="product-name"><%= p.title %></div>
+    <div class="product-name"><%=p.description%></div>
+    <div class="product-name"><%=p.category%></div>
+    <div class="product-price"><%= p.price %></div>
+    <a href="/productdetail/<%=p._id%>">View Product</a>
   </div>
-  <div class="product">
-    <img src="/public/imgs/shirt2.png" class="img-border" style="border-color: #953F40;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt3.png" class="img-border" style="border-color: #CCAC3C;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt1.png" class="img-border" style="border-color: #8A0204;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt3.png" class="img-border" style="border-color: #CCAC3C;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt2.png" class="img-border" style="border-color: #953F40;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt2.png" class="img-border" style="border-color: #CCAC3C;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt3.png" class="img-border" style="border-color: #953F40;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt1.png" class="img-border" style="border-color: #8A0204;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt1.png" class="img-border" style="border-color: #8A0204;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt2.png" class="img-border" style="border-color: #CCAC3C;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt3.png" class="img-border" style="border-color: #CCAC3C;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-<div class="product">
-    <img src="/public/imgs/shirt1.png" class="img-border" style="border-color: #8A0204;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt2.png" class=" img-border" style="border-color: #CCAC3C;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt3.png" class="img-border" style="border-color: #CCAC3C;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt1.png" class="img-border" style="border-color: #8A0204;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt2.png" class=" img-border" style="border-color: #CCAC3C;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt3.png" class="img-border" style="border-color: #CCAC3C;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt1.png" class="img-border" style="border-color: #8A0204;">
-    <div class="product-name">Product Name</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt2.png" class=" img-border" style="border-color: #CCAC3C;">
-    <div class="product-name">Yellow Tshirt</div>
-    <div class="product-price">Rs.4000</div>
-  </div>
-  <div class="product">
-    <img src="/public/imgs/shirt3.png" class="img-border" style="border-color: #CCAC3C;">
-    <div class="product-name">Tshirt</div>
-    <div class="product-price">Rs.2000</div>
-  </div>
-
+  <% }) %>
 </div>
+</div>
+<% }) %>
+
+
       </div>
     </div>
 <div id="myModal" class="modal fade" role="dialog">
