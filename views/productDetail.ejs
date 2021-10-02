@@ -62,14 +62,6 @@
           <span class="item-price">$84.99</span>
           <span class="item-quantity">Quantity: 01</span>
         </li>
-  
-        <li class="clearfix">
-          <img src="/imgs/shirt2.png" alt="item1" />
-          <span class="item-name">Tshirt2</span>
-          <span class="item-price">$12.99</span>
-          <span class="item-quantity">Quantity: 01</span>
-        </li>
-  
        
       </ul>
   
@@ -90,20 +82,6 @@
   <img id="NZoomImg" data-NZoomscale="2" src="data:image/<%=img.contentType%>;base64,<%=img.data.toString('base64')%>" class="img-responsive magnifiedImg"  >
 
  </div>
- <!-- <div class="img1 img-responsive zoom" id="ex2">
-  <img id="NZoomImg2" data-NZoomscale="2" src="/imgs/1_1.jpeg" class="img-responsive">
-
- </div>
-
- <div class="img1 img-responsive zoom" id="ex3">
-  <img id="NZoomImg3" data-NZoomscale="2" src="/imgs/1_2.jpeg" class="img-responsive">
-
- </div> -->
- <!-- <div class="img1 img-responsive zoom" id="ex4">
-  <img id="NZoomImg4" data-NZoomscale="2" src="/imgs/shirt4.png" class="card img-responsive">
-
- </div>
-          -->
         
         </div>
       </div>
@@ -137,20 +115,10 @@
           <%}%>
   
         </div>
-         <!-- <select name="sizes" id="size">
-           <option value="size-s" selected>S</option>
-
-           <option value="size-m">M</option>
-
-           <option value="size-l">L</option>
-
-           <option value="size-xl">XL</option>
-
-         </select> -->
          <br> <br>
         
         <div class="uwu">
-          <button class="add-to-cart">Add To Cart</button>
+          <a href="/productdetail/add-to-cart/<%=_id%>"><button class="add-to-cart">Add To Cart</button></a>
            <div class="stock" id="st">In Stock</div>
         </div>
 
@@ -201,97 +169,6 @@
   console.log(getInputRadio.attr("id"));  
 });
 
-//   /*Size is  set in pixels... supports being written as: '250px' */
-// var magnifierSize = 100;
-
-// /*How many times magnification of image on page.*/
-// var magnification = 4;
-
-// function magnifier() {
-
-//   this.magnifyImg = function(ptr, magnification, magnifierSize) {
-//     var $pointer;
-//     if (typeof ptr == "string") {
-//       $pointer = $(ptr);
-//     } else if (typeof ptr == "object") {
-//       $pointer = ptr;
-//     }
-    
-//     if(!($pointer.is('img'))){
-//       alert('Object must be image.');
-//       return false;
-//     }
-
-//     magnification = +(magnification);
-
-//     $pointer.hover(function() {
-//       $(this).css('cursor', 'none');
-//       $('.magnify').show();
-//       //Setting some variables for later use
-//       var width = $(this).width();
-//       var height = $(this).height();
-//       var src = $(this).attr('src');
-//       var imagePos = $(this).offset();
-//       var image = $(this);
-
-//       if (magnifierSize == undefined) {
-//         magnifierSize = '150px';
-//       }
-
-//       $('.magnify').css({
-//         'background-size': width * magnification + 'px ' + height * magnification + "px",
-//         'background-image': 'url("' + src + '")',
-//         'width': magnifierSize,
-//         'height': magnifierSize
-//       });
-
-//       //Setting a few more...
-//       var magnifyOffset = +($('.magnify').width() / 2);
-//       var rightSide = +(imagePos.left + $(this).width());
-//       var bottomSide = +(imagePos.top + $(this).height());
-
-//       $(document).mousemove(function(e) {
-//         if (e.pageX < +(imagePos.left - magnifyOffset / 6) || e.pageX > +(rightSide + magnifyOffset / 6) || e.pageY < +(imagePos.top - magnifyOffset / 6) || e.pageY > +(bottomSide + magnifyOffset / 6)) {
-//           $('.magnify').hide();
-//           $(document).unbind('mousemove');
-//         }
-//         var backgroundPos = "" - ((e.pageX - imagePos.left) * magnification - magnifyOffset) + "px " + -((e.pageY - imagePos.top) * magnification - magnifyOffset) + "px";
-//         $('.magnify').css({
-//           'left': e.pageX - magnifyOffset,
-//           'top': e.pageY - magnifyOffset,
-//           'background-position': backgroundPos
-//         });
-//       });
-//     }, function() {
-
-//     });
-//   };
-
-//   this.init = function() {
-//     $('body').prepend('<div class="magnify"></div>');
-//   }
-
-//   return this.init();
-// }
-
-// var magnify = new magnifier();
-// magnify.magnifyImg('img', magnification, magnifierSize);
-
-
-
-
-
-// $(document).ready(function() {
-
-// $('.color-choose input').on('click', function() {
-//   var headphonesColor = $(this).attr('data-image');
-//   $('.active').fadeOut(500).removeClass('active');
-//   $('.left-column img[data-image = ' + headphonesColor + ']').fadeIn(250).addClass('active');
-//   $(this).addClass('active');
-// });
-
-
-// });
 
 $("select[name=l-size ]")
     .on("click", changeEvent);

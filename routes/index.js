@@ -12,6 +12,8 @@ router.get('/',function(req,res){
     res.render('landing');
 })
 
+
+
 // router.post('/order',function(req,res){
 //     const razorpay = new Razorpay({
 //         key_id:process.env.RAZORPAY_KEY,
