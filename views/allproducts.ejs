@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +15,6 @@
 </head>
 
 <body style="overflow-x: hidden;">
-
   <%- include('partials/header'); -%>
  <section style="margin-top: 100px;text-align: center;">
    <input type="text" id="search">
@@ -35,11 +33,11 @@
     <% data.forEach(function(p) { %> 
     <div class="row">  
     <div class="product">
-    <img class="img-border" style="border-color: #8A0204;" src="data:image/<%=p.img.contentType%>;base64,<%=p.img.data.toString('base64')%>"/></a>
-    <div class="product-name"><%= p.title %></div>
-    <div class="product-name"><%=p.description%></div>
-    <div class="product-name"><%=p.category%></div>
-    <div class="product-price"><%= p.price %></div>
+    <img class="img-border" style="border-color: #8A0204;" src="data:image/<%-p.img.contentType%>;base64,<%-p.img.data.toString('base64')%>"/></a>
+    <div class="product-name"><%-p.title %></div>
+    <div class="product-name"><%-p.description%></div>
+    <div class="product-name"><%-p.category%></div>
+    <div class="product-price"><%-p.price %></div>
     <a href="/productdetail/<%=p._id%>">View Product</a>
   </div>
   <% }) %>
@@ -87,7 +85,6 @@
  
 
 <script>
-
 $(document).ready(function(){
             $("#search").on("keyup", function() {
               var value = $(this).val().toLowerCase();

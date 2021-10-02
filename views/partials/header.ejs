@@ -20,9 +20,10 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">About Us</a></li>
                 <% if(session.cart){ %>
-                <li><a href="#" id="cart">Cart <span class="badge"><%- session.cart.totalQuantity%></span></a></li>
+                  <% console.log(session.cart) %>
+                  <li><a href="#" id="cart">Cart <span class="badge badge-pill"><%- session.cart.totalQuantity%></span></a></li>
                 <% } else { %>
-                  <li><a href="#" id="cart">Cart <span class="badge">0</span></a></li>
+                  <li><a href="#" id="cart">Cart <span class="badge badge-pill">0</span></a></li>
                 <% } %>
               </ul>
         </div>
@@ -31,27 +32,27 @@
 
   <div class="container-cart">
     <div class="shopping-cart" style="display: none;">
-      <div class="shopping-cart-header">
-        <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
-        <div class="shopping-cart-total">
-          <span class="lighter-text">Total:</span>
-          <span class="main-color-text">$2,229.97</span>
-        </div>
-      </div> 
-  
+      <% if(cart_products){ %>
+        <% cart_products.forEach( p =>{ %>
       <ul class="shopping-cart-items">
         <li class="clearfix">
-          <img src="/imgs/shirt1.png" alt="item1" />
-          <span class="item-name">Tshirt 1</span>
-          <span class="item-price">$84.99</span>
-          <span class="item-quantity">Quantity: 01</span>
+          <img src="" alt="items" />
+          <span class="item-name"><%-p.item.title %></span>
+          <span class="item-price"><%-p.price %></span>
+          <span class="item-quantity"><%-p.qty %></span>
         </li>
        
       </ul>
-  
+      <% }) %>
       <a href="#" class="button">Checkout</a>
     </div>
   </div>
+  <% } else { %>
+    <ul class="shopping-cart-items">
+        Your Cart is Empty!
+        </ul>
+  <% } %>
+</div>
 
   <div class="containerr">
     <div class="grid second-nav">
