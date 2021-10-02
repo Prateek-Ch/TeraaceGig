@@ -20,7 +20,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">About Us</a></li>
                 <% if(session.cart){ %>
-                <li><a href="#" id="cart">Cart <span class="badge"><%= session.cart.totalQuantity%></span></a></li>
+                <li><a href="#" id="cart">Cart <span class="badge"><%- session.cart.totalQuantity%></span></a></li>
                 <% } else { %>
                   <li><a href="#" id="cart">Cart <span class="badge">0</span></a></li>
                 <% } %>
@@ -52,3 +52,20 @@
       <a href="#" class="button">Checkout</a>
     </div>
   </div>
+
+  <div class="containerr">
+    <div class="grid second-nav">
+      <div class="column-xs-12">
+       
+      </div>
+    </div>
+
+<script>
+(function(){
+ $("#cart").on("click", function() {
+   $(".shopping-cart").fadeToggle( "fast");
+ });
+ 
+})();
+
+</script>
