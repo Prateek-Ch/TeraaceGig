@@ -39,8 +39,12 @@
             
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">About Us</a></li>
-                <li><a href="#" id="cart">Cart <span class="badge">3</span></a></li>
-            </ul>
+                <% if(session.cart){ %>
+                <li><a href="#" id="cart">Cart <span class="badge"><%= session.cart.totalQuantity%></span></a></li>
+                <% } else { %>
+                  <li><a href="#" id="cart">Cart <span class="badge">0</span></a></li>
+                <% } %>
+              </ul>
         </div>
     </div>
   </nav>    
