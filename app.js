@@ -40,6 +40,7 @@ var index = require('./routes/index');
 var allproducts = require('./routes/allproducts');
 var upload = require('./routes/upload');
 var productdetail = require('./routes/productdetail');
+var checkout = require('./routes/checkout');
 
 app.use(cors({origin: '*'}));
 
@@ -47,6 +48,7 @@ app.use('/',index);
 app.use('/allproducts',allproducts);
 app.use('/upload',upload);
 app.use('/productdetail',productdetail);
+app.use('/checkout',checkout);
 
 app.listen(3000, function() {
     console.log("Server started on port 3000");

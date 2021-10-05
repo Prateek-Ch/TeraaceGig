@@ -34,14 +34,17 @@
     <div class="shopping-cart" style="display: none;">
       <% if(cart_products){ %>
         <% cart_products.forEach( p =>{ %>
-      <ul class="shopping-cart-items">
+      <ul class="shopping-cart-items" style="list-style-type: none;">
         <li class="clearfix">
-          <img src="" alt="items" />
+          <% var x = p.item.img.data.data %>
+          <% var y = Buffer.from(x,'base64'); %>
+          <% y = y.toString('base64'); %>
+          <img src="data:image/<%-p.item.img.contentType%>;base64,<%-y%>" alt="items" style="height: 80px; width: 80px;"/>
           <span class="item-name"><%-p.item.title %></span>
           <span class="item-price"><%-p.price %></span>
           <span class="item-quantity"><%-p.qty %></span>
           <div class="btn-group">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit <span class="caret"></span> </button>
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit<span class="caret"></span> </button>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="/productdetail/reduce/<%-p.item._id %>">Remove One</a> <br>
               <a class="dropdown-item" href="/productdetail/removeAll/<%-p.item._id %>">Remove All</a>
@@ -52,7 +55,7 @@
        
       </ul>
       <% }) %>
-      <a href="#" class="button">Checkout</a>
+      <a href="/checkout" class="button">Checkout</a>
     </div>
   </div>
   <% } else { %>

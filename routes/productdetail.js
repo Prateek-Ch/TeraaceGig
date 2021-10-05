@@ -35,6 +35,7 @@ router.get('/add-to-cart/:id',function(req,res){
     Product.findById(productId, function(err,product){
         if(err){
             console.log(err);
+            alert('Sorry, we were unable to add the product to your cart');
             res.redirect('/');
         }
         else{
