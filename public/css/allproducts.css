@@ -50,6 +50,7 @@
     column-gap:30px;
   }
   }
+}
   @media (max-width:800px){
     #gallery{
     -webkit-column-count:2;
@@ -165,7 +166,6 @@
 }
 
 .img-border {
-  border: 15px solid black;
   border-radius: 20px;
   overflow-x: hidden !important;
   width: 300px;
@@ -181,7 +181,7 @@ html,body {
 overflow-x: hidden;
 }
 
-@media (max-width:600px){
+@media (max-width:600px) {
 #gallery{
 -webkit-column-count:2;
 -moz-column-count:2;
@@ -195,5 +195,5 @@ margin: 0px;
 .img-border {
   width: 150px;
 
-}
+ }
 }
