@@ -141,6 +141,7 @@ overflow-x: hidden ;
     overflow-x: hidden ;
     margin: 0;
     padding:0;
+  
 }
 
 #myVideo{
@@ -181,7 +182,7 @@ overflow-x: hidden ;
     }
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:600px) {
     .navbar-brand{
         display: none;
     }
@@ -415,7 +416,15 @@ overflow-x: hidden ;
     clear: both;
   }
 
-
+@media (max-width:1030px) {
+  .video {
+    padding: 27vh 0;
+  }
+ 
+  .navbar {
+    margin-bottom: 0px;
+  }
+}
  
 
 

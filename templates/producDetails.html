@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/public/css/style.css">
     <link rel="stylesheet" href="/public/css/productDetails.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -45,6 +45,10 @@
     </div>
   </nav>    
 
+  <div class="cart-btn1" id="cart2">
+    <i class="fas fa-shopping-cart"></i>
+  </div>
+
   <div class="container-cart">
     <div class="shopping-cart" style="display: none;">
       <div class="shopping-cart-header">
@@ -55,16 +59,16 @@
         </div>
       </div> 
   
-      <ul class="shopping-cart-items">
+      <ul class="shopping-cart-items" style="list-style-type:none;">
         <li class="clearfix">
-          <img src="/public/imgs/shirt1.png" alt="item1" />
+          <img src="/public/imgs/shirt1.png" class="cart-img" alt="item1" />
           <span class="item-name">Tshirt 1</span>
           <span class="item-price">$84.99</span>
           <span class="item-quantity">Quantity: 01</span>
         </li>
   
         <li class="clearfix">
-          <img src="/public/imgs/shirt2.png" alt="item1" />
+          <img src="/public/imgs/shirt2.png" class="cart-img" alt="item1" />
           <span class="item-name">Tshirt2</span>
           <span class="item-price">$12.99</span>
           <span class="item-quantity">Quantity: 01</span>
@@ -76,6 +80,8 @@
       <a href="#" class="button">Checkout</a>
     </div>
   </div>
+
+  
 
   <div class="containerr">
     <div class="grid second-nav">
@@ -388,7 +394,11 @@ $(document).ready(function() {
    $(".shopping-cart").fadeToggle( "fast");
  });
  
+ $("#cart2").on("click", function() {
+   $(".shopping-cart").fadeToggle( "fast");
+ });
 })();
+
 
 
   </script>

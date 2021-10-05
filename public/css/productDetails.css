@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Pontano+Sans");
 .containerr {
   margin: auto;
-  padding: 20vh 1rem;
+  padding: 20vh 0;
   width: 100%;
 }
 
@@ -702,7 +702,7 @@ nav li {
 
 .containerr {
   margin: auto;
-  padding: 5vw;
+  padding: 1.5vw;
   padding-top: 5vw;
   padding-bottom: 10vw; 
   width: 100%;
@@ -717,6 +717,7 @@ nav li {
   -webkit-column-gap:15px;
   -moz-column-gap:15px;
   column-gap:15px;
+  padding-right: 2.5vw;
 }
 @media (max-width:1200px){
   #gallery{
@@ -756,6 +757,7 @@ nav li {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background: none !important;
+  border-radius: 20px;
 
 }
 
@@ -985,4 +987,40 @@ border: 3px rgb(255, 0, 0) solid;
 
 .colors input{
   display:none;
+}
+
+.cart-img {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+}
+
+
+
+.shopping-cart {
+  height: 20px;
+  padding-top: 100px;
+  z-index: 998;
+  position: relative;
+  height: 100vh;
+  
+}
+
+.cart-btn1 {
+  padding: 10px;
+  background: #f1eeee;
+  color: #000000;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+  font-size: 24px;
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .cart-btn1 {
+    display: block;
+  }
 }
