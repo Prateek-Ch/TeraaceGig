@@ -1,34 +1,25 @@
+var mongoose =  require('mongoose');
 
-const productModel = require('./models/product')
+const reviewSchema = new mongoose.Schema(
+  {
+    name: { type: String, required: true },
+    rating: { type: Number, default: 0 },
+    comment: { type: String, required: true },
+  },
+  {
+    timestamps: true,
+  }
+);
 
-var p = new productModel({
-    name: 'abc',
-    image: [],
-    price: 2000,
-    category: "Clothing",
-    description: 'This is clothing',
-    attributes: [{
-        size: 'L',
-        color: 'Red',
-        countInStoc: 0
-    },
-    {
-        size: 'XS',
-        color: 'Red',
-        countInStoc: 2
-    },
-
-],
-    rating: 2,
-    reviews: []
+const productSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  img: {data: Buffer, contentType: String},
+  price: { type: Number, default: 0, required: true },
+  category: { type: String, required: true },
+  description: { type: String, required: true },
+  pid:{type: Number, required: true},
+  rating: { type: Number, default: 0, required: true },
+  reviews: [reviewSchema],
 });
 
-p.save(function(err,result){
- if(err) {
-     console.log('Error is: ')
-     console.log(err)
- }
- else{
-     console.log("No error")
- }
-});
+module.exports = mongoose.model("product",productSchema);

@@ -1,0 +1,80 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <a href="" class="navbar-brand"><img src="/imgs/logo.png" alt="" srcset="" class="navlogo">
+        </a> 
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#somewhere1">Apparel</a></li>
+                <li><a href="#somewhere2">Home Decor</a></li>
+                <li><a href="#somewhere1">Collections</a></li>
+            </ul>
+
+            
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">About Us</a></li>
+                <% if(session.cart){ %>
+                  <% console.log(session.cart) %>
+                  <li><a href="#" id="cart">Cart <span class="badge badge-pill"><%- session.cart.totalQuantity%></span></a></li>
+                <% } else { %>
+                  <li><a href="#" id="cart">Cart <span class="badge badge-pill">0</span></a></li>
+                <% } %>
+              </ul>
+        </div>
+    </div>
+  </nav>    
+
+  <div class="container-cart">
+    <div class="shopping-cart" style="display: none;">
+      <% if(cart_products){ %>
+        <% cart_products.forEach( p =>{ %>
+      <ul class="shopping-cart-items">
+        <li class="clearfix">
+          <img src="" alt="items" />
+          <span class="item-name"><%-p.item.title %></span>
+          <span class="item-price"><%-p.price %></span>
+          <span class="item-quantity"><%-p.qty %></span>
+          <div class="btn-group">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit <span class="caret"></span> </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/productdetail/reduce/<%-p.item._id %>">Remove One</a> <br>
+              <a class="dropdown-item" href="/productdetail/removeAll/<%-p.item._id %>">Remove All</a>
+            </div>
+          </div>
+
+        </li>
+       
+      </ul>
+      <% }) %>
+      <a href="#" class="button">Checkout</a>
+    </div>
+  </div>
+  <% } else { %>
+    <ul class="shopping-cart-items">
+        Your Cart is Empty!
+        </ul>
+  <% } %>
+</div>
+
+  <div class="containerr">
+    <div class="grid second-nav">
+      <div class="column-xs-12">
+       
+      </div>
+    </div>
+
+<script>
+(function(){
+ $("#cart").on("click", function() {
+   $(".shopping-cart").fadeToggle( "fast");
+ });
+ 
+})();
+
+</script>

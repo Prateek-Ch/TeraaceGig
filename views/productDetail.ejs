@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Terrace Gig</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/productDetails.css">
+
+</head>
+
+<body>
+
+  
+  <%- include('partials/header'); -%>
+
+    <div class="grid product">
+      <div class="column-xs-12 column-md-7">
+        <div id="gallery" class="container-fluid preview">  
+ <div class="img1 img-responsive zoomArea zoom" id='ex1'>
+  <img id="NZoomImg" data-NZoomscale="2" src="data:image/<%=img.contentType%>;base64,<%=img.data.toString('base64')%>" class="img-responsive magnifiedImg"  >
+
+ </div>
+        
+        </div>
+      </div>
+      <div class="column-xs-12 column-md-7 column-lg-5">
+        <div class="description">
+         <%=description%>
+      </div>
+      <div class="product-color">
+        <span>Color</span>
+ <br>
+
+<div class="colors">
+  <%for(var i = 0; i<attr.length; i++){%>
+  <input type="radio" name="radio" id="radio-<%=attr[i].color %>">
+  <label class="colour-box-<%=attr[i].color %>" for="radio-<%=attr[i].color %>"></label>
+  <%}%>  
+</div>  
+      </div>
+        <h1><%=title%>
+        </h1>
+        <h2>Rs.<%=price%></h2>
+         <br>
+         <label for="sizes" style="border: none;">Size</label>
+        
+         <div class="select-size">
+          <%for(var i = 0; i<attr.length; i++){%>
+            <%for(var j = 0; j<attr[i].sizes.length; j++){%>
+          <input type="radio" name="s-size" id="<%= attr[i].sizes[j] %>" checked/>
+          <label for="<%= attr[i].sizes[j] %>"><%= attr[i].sizes[j] %></label>
+          <%}%>
+          <%}%>
+  
+        </div>
+         <br> <br>
+        
+        <div class="uwu">
+          <a href="/productdetail/add-to-cart/<%=_id%>"><button class="add-to-cart">Add To Cart</button></a>
+           <div class="stock" id="st">In Stock</div>
+        </div>
+
+        <br> <br>
+        
+          
+        
+      </div>
+    </div>
+
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+          </div>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+
+<div class="footer justify-content-center">
+ <div>@theterracegig</div>
+ <div>TerraceGig@Gmail.com</div>
+ <div>@theterracegig</div>
+</div>
+ 
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+<script src="/js/Nzoom.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+			$('#ex1').zoom();
+			$('#ex2').zoom();
+			$('#ex3').zoom();			 
+			$('#ex4').zoom();
+		});
+
+    $("body").on("click", "label", function(e) {
+  var getValue = $(this).attr("for");
+  var goToParent = $(this).parents(".select-size");
+  var getInputRadio = goToParent.find("input[id = " + getValue + "]");
+  console.log(getInputRadio.attr("id"));  
+});
+
+
+$("select[name=l-size ]")
+    .on("click", changeEvent);
+
+function changeEvent(event){
+   document.getElementById('st').innerHTML = "<span class='out'>Out of Stock</span>"
+}
+
+$("select[name=s-size ]")
+    .on("click", changeEvent);
+
+function changeEvent(event){
+   document.getElementById('st').innerHTML = "<span class='out'>Out of Stock</span>"
+}
+
+$(document).on('change', 'select', function() {
+    console.log($(this).val()); 
+    if($(this).val() == "size-m"){
+      document.getElementById('st').innerHTML = "<span class='out'>Out of Stock</span>"
+
+    }
+
+    else if($(this).val() == "size-s") {
+      document.getElementById('st').innerHTML = "In Stock"
+
+    }
+    
+});
+
+
+$(document).ready(function() {
+
+  if($("#size").val() == "size-m"){
+      document.getElementById('st').innerHTML = "<span class='out'>Out of Stock</span>"
+
+    }
+
+    else if($("#size").val() == "size-s") {
+      document.getElementById('st').innerHTML = "In Stock"
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
