@@ -1,0 +1,161 @@
+.about-container {
+    padding: 5rem 10vw;
+    text-align: center;
+}
+
+.about-img {
+    width: 400px;
+    margin-bottom: 30px;
+    height: 300px;
+    margin-top: 50px;
+}
+
+.another {
+    background-color:#DEE1E1;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.another-js {
+    height: 200px;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 40px;
+    left: 15px;
+    color: white;
+    font-family: Roboto;
+    font-size: 2rem;
+font-style: normal;
+font-weight: normal;
+background: rgba(0, 0, 0, 0.75);
+padding: 10px;
+  }
+
+  .centered {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Roboto;
+    font-size: 2rem;
+font-style: normal;
+font-weight: normal;
+background: rgba(0, 0, 0, 0.75);
+padding: 10px;
+  }
+
+  .bottom-right {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    color: white;
+    font-family: Roboto;
+    font-size: 2rem;
+font-style: normal;
+font-weight: normal;
+background: rgba(0, 0, 0, 0.75);
+padding: 10px;
+  }
+
+  .top-right {
+ float: right;
+    color: white;
+    font-family: Roboto;
+    font-size: 1.8rem;
+font-style: normal;
+font-weight: normal;
+background: rgba(0, 0, 0, 0.75);
+padding: 10px;
+  }
+
+  .about-content {
+      float: right;
+      text-align: left;
+  }
+  .modall {
+      cursor: pointer;
+  }
+
+  /* .modal {
+      position: fixed;
+      top: 40vh;
+  } */
+
+ 
+
+  .modal-content {
+    padding: 20px;
+    width: 60vw;
+    
+  }
+
+  .body-content {
+      height: 300px;
+      overflow-y: scroll;
+      
+
+  }
+
+  .body-content::-webkit-scrollbar {
+    width: 5px;
+  }
+   
+
+  .body-content::-webkit-scrollbar-thumb {
+    background-color: #C4C4C4;
+  }
+  
+
+
+  .modal-image {
+      height: 300px;
+      max-width: 300px;
+  }
+
+  .modal-titlee {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3rem;
+  }
+
+  .modal-dialog {
+      position: absolute;
+      top: 20vh;
+      left: 20vw;
+  }
+
+ @media (max-width: 1200px) {
+     .bottom-right , .bottom-left {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+     }
+
+ }
+
+ @media (max-width: 600px) {
+    .modal-image {
+        width: 275px;
+        height: auto;
+    }
+
+    .modal-dialog {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+    .modal-content {
+        width: auto;
+    }
+
+    .about-img {
+        max-width: 250px;
+    }
+
+}
