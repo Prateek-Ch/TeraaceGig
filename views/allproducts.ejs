@@ -16,31 +16,32 @@
 
 <body style="overflow-x: hidden;">
   <%- include('partials/header'); -%>
- <section style="margin-top: 100px;text-align: center;">
-   <input type="text" id="search">
- </section>
-
+ 
   <div>
     <div class=" second-nav">
-      <div class="column-xs-12">
+      <div class="row" >
+        <div class="col-lg-3">
           <div class="head">All Products</div>
       </div>
+      <div class="col-lg-2 search-col" >
+        <input type="text" id="search">
+      </div>
+      </div>
+      
     </div>
     <div class="grid product">
       <div class="column-xs-12 ">
 <% datas.forEach( data =>{ %>
 <div id="gallery" class="container-fluid ">
     <% data.forEach(function(p) { %> 
-    <div class="row">  
+
     <div class="product">
     <img class="img-border" src="data:image/<%-p.img.contentType%>;base64,<%-p.img.data.toString('base64')%>"/></a>
-    <div class="product-name"><%-p.title %></div>
-    <div class="product-name"><%-p.description%></div>
-    <div class="product-name"><%-p.category%></div>
-    <div class="product-price"><%-p.price %></div>
-    <a href="/productdetail/<%=p._id%>">View Product</a>
-  </div>
+    <a href="/productdetail/<%=p._id%>">    <div class="product-name"><%-p.title %></div>
+    </a>
+
   <% }) %>
+  
 </div>
 </div>
 <% }) %>
