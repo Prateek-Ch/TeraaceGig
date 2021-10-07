@@ -23,7 +23,7 @@
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
   
-    axios.post('/order')
+    axios.post('/checkout/order')
     .then((info)=>{
         console.log('From Axios to receive order id: ');
         console.log(info);
