@@ -7,8 +7,8 @@ var Cart = require('../models/cart');
 router.get('/',function(req,res){
     Product.find({},function(err,datas){
       var productChunks = [];
-      for (var i=0; i<datas.length;i+=3){
-        productChunks.push(datas.slice(i,i+3));
+      for (var i=0; i<datas.length;i+=4){
+        productChunks.push(datas.slice(i,i+4));
       }
       if(!req.session.cart){
         return res.render('allproducts',{datas: productChunks, cart_products: null});
