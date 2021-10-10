@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/allproducts.css">
 
@@ -16,17 +17,18 @@
 
 <body style="overflow-x: hidden;">
   <%- include('partials/header'); -%>
- <section style="margin-top: 100px;text-align: center;">
-   <input type="text" id="search">
+ <section class="input-section">
+   <input type="text" id="search" class="input-field" placeholder="Search...">
+   <i class="fa fa-search search-icon" aria-hidden="true"></i>
  </section>
 
-  <div>
-    <div class=" second-nav">
+  <div class="click">
+    <div class="second-nav">
       <div class="column-xs-12">
           <div class="head">All Products</div>
       </div>
     </div>
-
+  
     <div class="grid">
         <% datas.forEach( data =>{ %>
         <div id="gallery" class="container-fluid ">
@@ -44,8 +46,6 @@
             <% }) %>
         </div>
         <% }) %>
-      
-
     </div>
   </div>
 <div id="myModal" class="modal fade" role="dialog">
@@ -85,14 +85,20 @@
 
 <script>
 $(document).ready(function(){
-            $("#search").on("keyup", function() {
-              var value = $(this).val().toLowerCase();
-              $("#gallery .product").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-              });
-            });
-          });
-          
+  $("#search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#gallery .product").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<script>
+//   (function(){
+//  $(".click").on("click", function() {
+//    $(".shopping-cart").fadeToggle( "fast");
+//  });
+// })();
 </script>
 
 </body>
