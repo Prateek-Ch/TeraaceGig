@@ -7,8 +7,7 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-        <a href="" class="navbar-brand"><img src="/imgs/logo.png" alt="" srcset="" class="navlogo">
-        </a> 
+        <a href="" class="navbar-brand"><img src="/imgs/logo.png" alt="" srcset="" class="navlogo"></a> 
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li><a href="#somewhere1">Apparel</a></li>
@@ -30,7 +29,11 @@
     </div>
   </nav>    
 
-  <div class="container-cart">
+  <div class="container-cart" 
+    style="position: absolute !important; 
+      right: 1vw; 
+      top: 10vh;"
+  >
     <div class="shopping-cart" style="display: none;">
       <% if(cart_products){ %>
         <% cart_products.forEach( p =>{ %>
@@ -77,7 +80,6 @@
  $("#cart").on("click", function() {
    $(".shopping-cart").fadeToggle( "fast");
  });
- 
 })();
 
 </script>
