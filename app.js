@@ -41,6 +41,7 @@ var allproducts = require('./routes/allproducts');
 var upload = require('./routes/upload');
 var productdetail = require('./routes/productdetail');
 var checkout = require('./routes/checkout');
+var lookbook = require('./routes/lookbook');
 
 app.use(cors({origin: '*'}));
 
@@ -49,6 +50,7 @@ app.use('/allproducts',allproducts);
 app.use('/upload',upload);
 app.use('/productdetail',productdetail);
 app.use('/checkout',checkout);
+app.use('/lookbook',lookbook);
 
 app.listen(3000, function() {
     console.log("Server started on port 3000");

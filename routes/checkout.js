@@ -55,7 +55,7 @@ console.log("Body",req.body);
          order.save(function(err,result){
             if(err) console.log(err);
          });
-        req.session.cart = null;
+        req.session.destroy();
    
    });
    
