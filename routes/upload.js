@@ -28,11 +28,19 @@ router.get('/attr',function(req,res){
   res.render('attributes');
 })
 
-router.post("/imagehandle", upload.single("image"), async (req, res) => {
-
-    console.log(req.file);
-    const result = await uploadFile(req.file);
+router.post("/imagehandle", upload.array("image",10), async (req, res) => {
+    console.log("Files",req.files);
+    const result = await uploadFile(req.files);
     console.log("result",result);
+   
+    let imageArray = [];
+    let key;
+    for(let i=0;i<result.length;i++){
+      key = result[i].Key;
+      imageArray.push(key);
+    }
+    console.log("Image Array",imageArray);
+
 
     var obj = {
       title: req.body.name,
@@ -40,10 +48,7 @@ router.post("/imagehandle", upload.single("image"), async (req, res) => {
       category:req.body.category,
       price: req.body.price,
       pid: req.body.pid,
-      img: {
-        location: result.Location,
-        key: result.Key
-      },
+      img: imageArray
     };
     imgModel.create(obj, (err, item) => {
       if (err) {

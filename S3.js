@@ -15,16 +15,28 @@ const s3 = new S3({
 })
 
 //uploads a file to S3
-function uploadFile(file){
-    const fileStream = fs.createReadStream(file.path)
+async function uploadFile(files){
+    let imagePathArray = [];
+    let fileNameArray = [];
+    let filePath,fileName;
+    for(let i = 0; i<files.length;i++){
+        filePath = files[i].path;
+        fileName = files[i].filename;
+        imagePathArray.push(filePath);
+        fileNameArray.push(fileName);
+    }
+    let uploadParamsArray = [];
 
+    for(let i = 0; i<imagePathArray.length;i++){
+    const fileStream = fs.createReadStream(imagePathArray[i]);
     const uploadParams = {
         Bucket: awsName,
         Body: fileStream,
-        Key: file.filename,
+        Key: fileNameArray[i],
+     }
+     uploadParamsArray.push(await s3.upload(uploadParams).promise());
     }
-
-   return s3.upload(uploadParams).promise()
+   return uploadParamsArray;
 }
 
 exports.uploadFile = uploadFile

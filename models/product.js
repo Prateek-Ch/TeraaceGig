@@ -11,29 +11,9 @@ const reviewSchema = new mongoose.Schema(
   }
 );
 
-
-// const imageSchema = new mongoose.Schema(
-//     {
-//         name:{type: String},
-//         img:
-// 	    {
-// 		data: Buffer,
-// 		contentType: String
-// 	    }
-//     }
-// );
-
-// const colorSchema = new mongoose.Schema(
-//   {
-//       color: {type: String, required: true},  
-//       size_avail:[String],
-//       countInStock: [Number] 
-//   }
-// );
-
 const productSchema = new mongoose.Schema({
   title: { type: String, required: true },
-  img: {location: String, key: String},
+  img: [String],
   price: { type: Number, default: 0, required: true },
   category: { type: String, required: true },
   description: { type: String, required: true },
