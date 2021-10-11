@@ -1,5 +1,5 @@
 .lookbook-sec {
-    padding: 100px 5vw;
+    padding: 100px 2vw;
     
 }
 
@@ -15,7 +15,7 @@
 
 .look-cont {
     background-color: black;
-    padding-top: 80px;
+    padding-top: 20px;
     padding-left: 80px;
     padding-right: 80px;
     color: rgb(255, 255, 255);
@@ -23,15 +23,15 @@
 }
 
 .look-text {
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: center;
-    font-size: 18px;
+    font-size: 2.3rem;
     font-weight: 400;
     margin-bottom: 50px;
 }
 
 .look-img {
-    max-width: 400px;
+    width: 100%;
     margin-top: 15px;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
@@ -46,5 +46,27 @@ text-align: center;
         max-width: 300px;
         margin-top: 15px;
         
+    }
+}
+.navigation{
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+}
+.navigation .one{
+    color: white;
+    font-size: 2rem;
+}
+@media (max-width: 1550px) {
+    .look-text {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 1.9rem;
+        font-weight: 400;
+        margin-bottom: 50px;
     }
 }

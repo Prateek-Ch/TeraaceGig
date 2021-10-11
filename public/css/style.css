@@ -5,12 +5,11 @@
     background: white;
     border: none;
 }
-
 .navbar li a {
     font-family: Amiko;
 font-style: normal;
 font-weight: normal;
-font-size: 18px;
+font-size: 3rem;
 line-height: 32px;
     color: black !important;
 }
@@ -150,7 +149,7 @@ overflow-x: hidden ;
 }
 
 .navlogo {
-    height: 50px;
+    height: 80px;
     position: absolute;
     left: 50%;
     display: block;
@@ -275,9 +274,8 @@ overflow-x: hidden ;
        flex-direction: row;
        flex-wrap: wrap;
   justify-content: center;
-  margin: 0px;
-  padding: 0px;
   background: black;
+  bottom: 0;
    }
 
    .footer div {
@@ -327,7 +325,7 @@ overflow-x: hidden ;
     border-radius: 10px;
     color: white;
     display: inline-block;
-    font-size: 12px;
+    font-size: 2rem;
     line-height: 1;
     padding: 3px 7px;
     text-align: center;
@@ -336,7 +334,6 @@ overflow-x: hidden ;
   }
   
   .shopping-cart {
-    margin: 20px 0;
     float: right;
     background: white;
     width: 320px;
@@ -458,4 +455,19 @@ overflow-x: hidden ;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(94, 22, 22); 
+}
+@media (max-width:1100px){
+  .shopping-cart {
+    width: 420px;
+  }
+}
+@media (max-width:850px){
+  .shopping-cart {
+    width: 380px;
+  }
+}
+@media (max-width:500px){
+  .shopping-cart {
+    width: 380px;
+  }
 }

@@ -1,5 +1,5 @@
 .about-container {
-    padding: 5rem 10vw;
+    padding: 5rem 0;
     text-align: center;
 }
 
@@ -12,8 +12,8 @@
 
 .another {
     background-color:#DEE1E1;
-    padding: 20px;
-    margin-top: 20px;
+    /* padding: 20px;
+    margin: 20px; */
 }
 
 .another-js {
