@@ -786,6 +786,10 @@ nav li {
     width: 44vw !important;
     font-size: 1.7rem!important;
   }
+  .new{
+    flex-direction: column !important;
+    justify-content: space-around !important;
+  }
 }
 
 #gallery img,#gallery video {
