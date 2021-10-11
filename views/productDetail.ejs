@@ -18,81 +18,197 @@
 <body>
 
   
-  <%- include('partials/header'); -%>
+  <!-- <%- include('partials/header'); -%>
 
-    <div class="grid product">
-      <div class="column-xs-12 column-md-7">
-        <div id="gallery" class="container-fluid preview">  
- <div class="img1 img-responsive zoomArea zoom" id='ex1'>
-  <img id="NZoomImg" data-NZoomscale="2" src="data:image/<%=img.contentType%>;base64,<%=img.data.toString('base64')%>" class="img-responsive magnifiedImg"  >
-
- </div>
-        
-        </div>
+  <div class="grid product">
+    <div class="column-xs-12 column-md-7">
+      <div id="gallery" class="container-fluid preview">  
+        <div class="img1 img-responsive zoomArea zoom" id='ex1'>
+          <img id="NZoomImg" data-NZoomscale="6" src="data:image/<%=img.contentType%>;base64,<%=img.data.toString('base64')%>" class="img-responsive magnifiedImg"  >
+        </div>  
       </div>
-      <div class="column-xs-12 column-md-7 column-lg-5">
-        <div class="description">
-         <%=description%>
+    </div>
+
+    <div class="column-xs-12 column-md-7 column-lg-5">
+      <div class="description">
+        <%=description%>
       </div>
       <div class="product-color">
         <span>Color</span>
- <br>
-
-<div class="colors">
-  <%for(var i = 0; i<attr.length; i++){%>
-  <input type="radio" name="radio" id="radio-<%=attr[i].color %>">
-  <label class="colour-box-<%=attr[i].color %>" for="radio-<%=attr[i].color %>"></label>
-  <%}%>  
-</div>  
-      </div>
-        <h1><%=title%>
-        </h1>
-        <h2>Rs.<%=price%></h2>
-         <br>
-         <label for="sizes" style="border: none;">Size</label>
-        
-         <div class="select-size">
+        <br>
+        <div class="colors">
           <%for(var i = 0; i<attr.length; i++){%>
-            <%for(var j = 0; j<attr[i].sizes.length; j++){%>
-          <input type="radio" name="s-size" id="<%= attr[i].sizes[j] %>" checked/>
-          <label for="<%= attr[i].sizes[j] %>"><%= attr[i].sizes[j] %></label>
-          <%}%>
-          <%}%>
-  
-        </div>
-         <br> <br>
-        
-        <div class="uwu">
-          <a href="/productdetail/add-to-cart/<%=_id%>"><button class="add-to-cart">Add To Cart</button></a>
-           <div class="stock" id="st">In Stock</div>
-        </div>
-
-        <br> <br>
-        
-          
-        
+          <input type="radio" name="radio" id="radio-<%=attr[i].color %>">
+          <label class="colour-box-<%=attr[i].color %>" for="radio-<%=attr[i].color %>"></label>
+          <%}%>  
+        </div>  
       </div>
+      <h1><%=title%></h1>
+      <h2>Rs.<%=price%></h2>
+      <br>
+      <label for="sizes" style="border: none;">Size</label>  
+      <div class="select-size">
+        <%for(var i = 0; i<attr.length; i++){%>
+          <%for(var j = 0; j<attr[i].sizes.length; j++){%>
+            <input type="radio" name="s-size" id="<%= attr[i].sizes[j] %>" checked/>
+            <label for="<%= attr[i].sizes[j] %>"><%= attr[i].sizes[j] %></label>
+          <%}%>
+        <%}%>
+      </div>
+      <br> <br> 
+      <div class="uwu">
+        <a href="/productdetail/add-to-cart/<%=_id%>"><button class="add-to-cart">Add To Cart</button></a>
+        <div class="stock" id="st">In Stock</div>
+      </div>
+      <br> <br>  
     </div>
+  </div>
 
-    <div id="myModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-    
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-body">
-          </div>
-        </div>
-    
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body"></div>
       </div>
     </div>
   </div>
+
+</div>
 
 <div class="footer justify-content-center" style="position: absolute;bottom: 0;width:100%;">
  <div>@theterracegig</div>
  <div>TerraceGig@Gmail.com</div>
  <div>@theterracegig</div>
+</div> -->
+
+
+
+
+
+<%- include('partials/header'); -%>
+
+<div class="containerr">
+  <div class="grid second-nav">
+    <div class="column-xs-12"></div>
+  </div>
+  <div class="grid product">
+    <div class="column-xs-12 column-md-7">
+      <div id="gallery" class="container-fluid preview">  
+        <!-- <div class="img1 img-responsive zoomArea zoom" id='ex1'>
+          <img id="NZoomImg" data-NZoomscale="2" src="/public/imgs/1.jpeg" class="img-responsive magnifiedImg">
+        </div>
+        <div class="img1 img-responsive zoom" id="ex2">
+          <img id="NZoomImg2" data-NZoomscale="2" src="/public/imgs/1_1.jpeg" class="img-responsive">
+        </div>
+        <div class="img1 img-responsive zoom" id="ex3">
+          <img id="NZoomImg3" data-NZoomscale="2" src="/public/imgs/1_2.jpeg" class="img-responsive">
+        </div>   -->
+        <div class="img1 img-responsive zoomArea zoom" id='ex1'>
+          <img id="NZoomImg" data-NZoomscale="2" src="data:image/<%=img.contentType%>;base64,<%=img.data.toString('base64')%>" class="img-responsive magnifiedImg"  >
+        </div>
+        <div class="img1 img-responsive zoomArea zoom" id='ex1'>
+          <img id="NZoomImg" data-NZoomscale="2" src="data:image/<%=img.contentType%>;base64,<%=img.data.toString('base64')%>" class="img-responsive magnifiedImg"  >
+        </div>
+        <div class="img1 img-responsive zoomArea zoom" id='ex1'>
+          <img id="NZoomImg" data-NZoomscale="2" src="data:image/<%=img.contentType%>;base64,<%=img.data.toString('base64')%>" class="img-responsive magnifiedImg"  >
+        </div><div class="img1 img-responsive zoomArea zoom" id='ex1'>
+          <img id="NZoomImg" data-NZoomscale="2" src="data:image/<%=img.contentType%>;base64,<%=img.data.toString('base64')%>" class="img-responsive magnifiedImg"  >
+        </div>
+      </div>
+    </div>
+    <div class="column-xs-12 column-md-7 column-lg-5">
+      <div class="description">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore exercitationem consequatur praesentium quia repellat ut modi totam sunt, est omnis! Repellendus dignissimos, similique dolores distinctio quam libero nemo velit. Officia sint possimus laborum sequi odit consequatur rerum quos laboriosam iure culpa libero ad, molestiae dolores. Enim aliquam recusandae harum ad.</p>
+      </div>
+      <div class="product-color">
+        <span>Colors : </span>
+        <br>
+        <!-- <div class="colors">
+          <input type="radio" name="radio" id="radio-black">
+          <label class="colour-box-black" for="radio-black"></label>
+
+          <input type="radio" name="radio" id="radio-brown" >
+          <label class="colour-box-brown" for="radio-brown"></label>
+
+          <input type="radio" name="radio" id="radio-yellow">
+          <label class="colour-box-yellow" for="radio-yellow"></label>
+
+          <input type="radio" name="radio" id="radio-green">
+          <label class="colour-box-green" for="radio-green"></label>
+
+          <input type="radio" name="radio" id="radio-blue">
+          <label class="colour-box-blue" for="radio-blue"></label>
+        </div>   -->
+        <div class="colors">
+          <%for(let i = 0; i<attr.length; i++){%>
+            <input type="radio" name="radio" id="radio-<%=attr[i].color %>">
+            <label class="colour-box-<%=attr[i].color %>" for="radio-<%=attr[i].color %>"></label>
+          <%}%> 
+        </div>
+    </div>
+    <h1 class="capitalise"><%=title%></h1>
+    <h2 class="price-tag">Price :</h2>
+    <h2 class="price-color"><%=price%></h2>
+    <br>
+    <div class="new">
+      <div>
+        <label for="sizes" style="border: none;" class="spann">Size : </label>
+        <div class="just-row">
+          <div class="select-size">
+            <input type="radio" name="s-size" id="x-small" checked/>
+            <input type="radio" name="s-size" id="small" />
+            <input type="radio" name="s-size" id="medium" />
+            <input type="radio" name="s-size" id="large" />
+            <input type="radio" name="s-size" id="x-large" />
+          
+            <label for="x-small">XS</label>
+            <label for="small">S</label>
+            <label for="medium">M</label>
+            <label for="large">L</label>
+            <label for="x-large">XL</label>
+
+            <!-- <%for(let i = 0; i<attr.length; i++){%>
+              <input type="radio" name="radio" id="radio-<%=attr[i].color %>">
+              <label class="colour-box-<%=attr[i].color %>" for="radio-<%=attr[i].color %>"></label>
+            <%}%> -->
+
+
+          </div>
+        </div>
+      </div>
+      <div class="quantity">
+        <div class="roww">
+          <div class="headerrr"><h2 class="titles">Quantity :</h2></div>
+          <div class="col">
+            <a href="#" class="quantity__minus"><span>-</span></a>
+            <input name="quantity" type="text" class="quantity__input" value="1">
+            <a href="#" class="quantity__plus"><span>+</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+       <br> <br>
+      <div class="uwu">
+        <!-- <button class="add-to-cart">Add To Cart</button> -->
+        <a href="/productdetail/add-to-cart/<%=_id%>"><button class="add-to-cart">Add To Cart</button></a>
+      </div>
+      <br> <br>      
+  </div>
 </div>
- 
+
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+        </div>
+      </div>
+  
+    </div>
+  </div>
+</div>
+
+
 <script
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -100,6 +216,7 @@
 <script src="/js/Nzoom.min.js"></script>
 
 <script>
+  console.log(attr.color)
   $(document).ready(function(){
 			$('#ex1').zoom();
 			$('#ex2').zoom();
@@ -156,6 +273,27 @@ $(document).ready(function() {
 
     }
 
+});
+
+$(document).ready(function() {
+  const minus = $('.quantity__minus');
+  const plus = $('.quantity__plus');
+  const input = $('.quantity__input');
+  minus.click(function(e) {
+    e.preventDefault();
+    var value = input.val();
+    if (value > 1) {
+      value--;
+    }
+    input.val(value);
+  });
+  
+  plus.click(function(e) {
+    e.preventDefault();
+    var value = input.val();
+    value++;
+    input.val(value);
+  })
 });
 
 </script>
