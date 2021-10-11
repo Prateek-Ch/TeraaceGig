@@ -40,14 +40,6 @@
 .look-imgs {
 text-align: center;
 }
-
-@media (max-width: 600px ) {
-    .look-img {
-        max-width: 300px;
-        margin-top: 15px;
-        
-    }
-}
 .navigation{
     width: 100%;
     height: 7vh;
@@ -68,5 +60,23 @@ text-align: center;
         font-size: 1.9rem;
         font-weight: 400;
         margin-bottom: 50px;
+    }
+}
+@media (max-width: 1120px){
+    .look-cont{
+        padding: 20px 70px 10px 70px;
+    }
+    .look-text{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 800px){
+    .lookbook-sec{
+        margin-top: 20px;
+    }
+}
+@media (max-width: 600px){
+    .look-cont{
+        padding: 20px 30px ;
     }
 }
