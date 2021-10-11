@@ -33,7 +33,7 @@
               <% data.forEach(function(p) { %> 
               <div class="row">  
                 <div class="product">
-                  <img class="img-border" style="border-color: #8A0204;" src="data:image/<%-p.img.contentType%>;base64,<%-p.img.data.toString('base64')%>"/>
+                  <img class="img-border" style="border-color: #8A0204;" src="/images/<%-p.img.key%>"/>
                   <div class="product-name"><%-p.title %></div>
                   <div class="product-name"><%-p.description%></div>
                   <div class="product-name"><%-p.category%></div>

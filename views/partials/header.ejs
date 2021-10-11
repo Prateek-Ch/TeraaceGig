@@ -36,10 +36,7 @@
         <% cart_products.forEach( p =>{ %>
       <ul class="shopping-cart-items" style="list-style-type: none;">
         <li class="clearfix">
-          <% var x = p.item.img.data.data %>
-          <% var y = Buffer.from(x,'base64'); %>
-          <% y = y.toString('base64'); %>
-          <img src="data:image/<%-p.item.img.contentType%>;base64,<%-y%>" alt="items" style="height: 80px; width: 80px;"/>
+          <img src="images/<%-p.item.img.key%>" alt="items" style="height: 80px; width: 80px;"/>
           <span class="item-name"><%-p.item.title %></span>
           <span class="item-price"><%-p.price %></span>
           <span class="item-quantity"><%-p.qty %></span>

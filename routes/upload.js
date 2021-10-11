@@ -6,6 +6,8 @@ var multer = require("multer");
 var fs = require("fs");
 var path = require("path");
 
+const {uploadFile} = require('../S3');
+
 var storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "routes/uploads");
@@ -26,7 +28,12 @@ router.get('/attr',function(req,res){
   res.render('attributes');
 })
 
-router.post("/imagehandle", upload.single("image"), (req, res, next) => {
+router.post("/imagehandle", upload.single("image"), async (req, res) => {
+
+    console.log(req.file);
+    const result = await uploadFile(req.file);
+    console.log("result",result);
+
     var obj = {
       title: req.body.name,
       description: req.body.desc,
@@ -34,10 +41,8 @@ router.post("/imagehandle", upload.single("image"), (req, res, next) => {
       price: req.body.price,
       pid: req.body.pid,
       img: {
-        data: fs.readFileSync(
-          path.join(__dirname + "/uploads/" + req.file.filename)
-        ),
-        contentType: "image/jpeg",
+        location: result.Location,
+        key: result.Key
       },
     };
     imgModel.create(obj, (err, item) => {
