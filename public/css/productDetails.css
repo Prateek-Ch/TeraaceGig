@@ -1137,36 +1137,6 @@ border: 3px rgb(255, 0, 0) solid;
   font-size: 3rem;
 }
 
-.colour-box-black {
-  background-color: #000000;
-  border: 3px #000000 solid;
-  border-radius: 50%;
-}
-
-.colour-box-brown {
-  background-color: #FF9900;
-  border: 3px #FF9900 solid;
-  border-radius: 50%;
-}
-
-.colour-box-yellow {
-  background-color: #FFFF00;
-  border: 3px #FFFF00 solid;
-  border-radius: 50%;
-}
-
-.colour-box-green {
-  background-color: #009E0F;
-  border: 3px #009E0F solid;
-  border-radius: 50%;
-}
-
-.colour-box-blue {
-  background-color: #2B78E4;
-  border: 3px #2B78E4 solid;
-  border-radius: 50%;
-}
-
 .colors input{
   display:none;
 }

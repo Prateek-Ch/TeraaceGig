@@ -41,8 +41,10 @@
 
 <div class="colors">
   <%for(var i = 0; i<attr.length; i++){%>
-  <input type="radio" name="radio" id="radio-<%=attr[i].color %>">
-  <label class="colour-box-<%=attr[i].color %>" for="radio-<%=attr[i].color %>"></label>
+  <input type="radio" name="radio">
+  <label style="background-color:<%-attr[i].color %>;
+    border: 3px <%-attr[i].color %> solid;
+   border-radius: 50%;" for="radio-<%=attr[i].color %>"></label>
   <%}%>  
 </div>  
       </div>
