@@ -712,10 +712,7 @@ nav li {
   -moz-column-count:4;
   column-count:2;
   padding-right: 35px !important;
-  
-  /* -webkit-column-gap:15px;
-  -moz-column-gap:15px;
-  column-gap:15px; */
+  padding-top: 6vh;
 }
 
 @media (max-width:800px){
