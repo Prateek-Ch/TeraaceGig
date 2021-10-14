@@ -1099,11 +1099,7 @@ nav li {
 .colors{
   display: flex;
   align-items: center;
-<<<<<<< HEAD
-  justify-content: space-evenly;
-=======
   justify-content: flex-start;
->>>>>>> 2857d472bd3101ffac7f01c9b2e04dd4d98c2da9
   width: 50%;
 }
 .colors label{
@@ -1164,7 +1160,7 @@ border: 3px rgb(255, 0, 0) solid;
   height: 20px;
   z-index: 998;
   position: relative;
-  height: 100vh;
+  height: 88vh;
   
 }
 

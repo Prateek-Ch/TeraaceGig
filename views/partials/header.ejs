@@ -17,11 +17,11 @@
       
       <ul class="nav navbar-nav navbar-right">
           <li><a href="#">About Us</a></li>
-          <% if(session.cart) { %>
+          <% if(session.cart.totalQuantity !== 0) { %>
             <% console.log(session.cart) %>
-            <li><a href="#" id="cart">Cart<span class="badge badge-pill"><%- session.cart.totalQuantity%></span></a></li>
+            <li><a href="#" id="cart">Cart<span class="badge badge-pill">.</span></a></li>
           <% } else { %>
-            <li><a href="#" id="cart">Cart<span class="badge badge-pill">0</span></a></li>
+            <li><a href="#" id="cart">Cart<span class="badge badge-pill"></span></a></li>
           <% } %>
       </ul>
     </div>
@@ -38,7 +38,7 @@
       <% cart_products.forEach( p =>{ %>
     <ul class="shopping-cart-items" style="list-style-type: none;">
       <li class="clearfix">
-        <img src="/images/<%-p.item.img[0]%>" alt="items" style="height: 80px; width: 80px;"/>
+        <img src="images/<%-p.item.img[0]%>" alt="items" style="height: 80px; width: 80px;"/>
         <span class="item-name"><%-p.item.title %></span>
         <span class="item-price"><%-p.price %></span>
         <span class="item-quantity"><%-p.qty %></span>
