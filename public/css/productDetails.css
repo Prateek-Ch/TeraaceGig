@@ -1093,7 +1093,7 @@ nav li {
 .colors{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 50%;
 }
 .colors label{

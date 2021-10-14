@@ -31,6 +31,7 @@ router.get('/:productId',function(req,res){
 
 router.get('/add-to-cart/:id',function(req,res){
     var productId = req.params.id;
+    console.log(req.body);
     var cart = new Cart(req.session.cart ? req.session.cart : {});
     Product.findById(productId, function(err,product){
         if(err){

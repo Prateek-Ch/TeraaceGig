@@ -39,13 +39,15 @@
         <span>Color</span>
  <br>
 
-<div class="colors">
+ <div class="colors">
+  <form id="color-form" action="/productdetail/add-to-cart/<%=_id%>">
   <%for(var i = 0; i<attr.length; i++){%>
-  <input type="radio" name="radio">
-  <label style="background-color:<%-attr[i].color %>;
-    border: 3px <%-attr[i].color %> solid;
-   border-radius: 50%;" for="radio-<%=attr[i].color %>"></label>
-  <%}%>  
+    <label style="background-color:<%-attr[i].color %>;
+      border: 3px <%-attr[i].color %> solid;
+     border-radius: 50%;" for="<%=attr[i].color %>" value="<%=attr[i].color %>">
+  <input type="radio" name="radio" onclick="styleChange()" id="<%=attr[i].color %>" value="<%=attr[i].color %>">
+ </label>
+  <%}%> 
 </div>  
       </div>
         <h1><%=title%>
@@ -61,19 +63,16 @@
           <label for="<%= attr[i].sizes[j] %>"><%= attr[i].sizes[j] %></label>
           <%}%>
           <%}%>
-  
+        </form> 
+        
         </div>
          <br> <br>
-        
         <div class="uwu">
-          <a href="/productdetail/add-to-cart/<%=_id%>"><button class="add-to-cart">Add To Cart</button></a>
+          <a href="/productdetail/add-to-cart/<%=_id%>"><button class="add-to-cart" type="submit">Add To Cart</button></a>
            <div class="stock" id="st">In Stock</div>
         </div>
-
         <br> <br>
-        
-          
-        
+
       </div>
     </div>
 
@@ -91,6 +90,16 @@
   </div>
 
   <%- include('partials/footer'); -%>
+
+
+  <script type="text/javascript">
+   function styleChange(){
+      var x = $("input[name='radio']:checked","#color-form").val();
+      <% "console.log(x);" %>
+    }
+  </script>
+
+
  
 <script
   src="https://code.jquery.com/jquery-3.6.0.js"

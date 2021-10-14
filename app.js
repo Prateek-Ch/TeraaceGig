@@ -43,6 +43,12 @@ var productdetail = require('./routes/productdetail');
 var checkout = require('./routes/checkout');
 var lookbook = require('./routes/lookbook');
 
+//Admin Routes
+var adminAddProducts = require('./routes/adminAddProduct');
+var adminDashboard = require('./routes/adminDashboard');
+var adminLogin = require('./routes/adminLogin');
+var adminViewProduct = require('./routes/adminViewProduct')
+
 app.use(cors({origin: '*'}));
 
 app.use('/',index);
@@ -51,6 +57,11 @@ app.use('/upload',upload);
 app.use('/productdetail',productdetail);
 app.use('/checkout',checkout);
 app.use('/lookbook',lookbook);
+app.use('/admin/addproduct',adminAddProducts);
+app.use('/admin/dashboard',adminDashboard);
+app.use('/admin/login',adminLogin);
+app.use('/admin/viewproduct',adminViewProduct);
+
 
 app.listen(3000, function() {
     console.log("Server started on port 3000");
