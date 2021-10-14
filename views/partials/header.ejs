@@ -7,7 +7,7 @@
           <span class="icon-bar"></span>
       </button>
     </div>
-    <a href="" class="navbar-brand"><img src="/imgs/logo.png" alt="" srcset="" class="navlogo"></a> 
+    <a href="" class="navbar-brand"><img src="/imgs/without text and bg 1.png" alt="" srcset="" class="navlogo"></a> 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="#somewhere1">Apparel</a></li>
@@ -17,7 +17,7 @@
       
       <ul class="nav navbar-nav navbar-right">
           <li><a href="#">About Us</a></li>
-          <% if(session.cart.totalQuantity !== 0) { %>
+          <% if(session.cart) { %>
             <% console.log(session.cart) %>
             <li><a href="#" id="cart">Cart<span class="badge badge-pill">.</span></a></li>
           <% } else { %>

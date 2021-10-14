@@ -226,6 +226,9 @@ html,body {
   .img-border {
     width: 150px;
   }
+  .grid{
+    padding-top: 0px;
+  }
 }
 
 @media (max-width:1490px){

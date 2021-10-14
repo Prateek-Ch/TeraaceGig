@@ -840,11 +840,11 @@ nav li {
   display: flex;
   justify-content: space-between;
 }
-#x-small:checked ~ label[for="x-small"],
-#small:checked ~ label[for="small"],
-#medium:checked ~ label[for="medium"],
-#large:checked ~ label[for="large"],
-#x-large:checked ~ label[for="x-large"] {
+#x-s:checked ~ label[for="x-s"],
+#s:checked ~ label[for="s"],
+#m:checked ~ label[for="m"],
+#l:checked ~ label[for="l"],
+#x-l:checked ~ label[for="x-l"] {
   background: rgb(199, 71, 71);
   color: #fff;
 }
@@ -920,11 +920,11 @@ nav li {
   font-size: 2.5rem;
 }
 
-#x-small ~ label[for="x-small"],
-#small ~ label[for="small"],
-#medium ~ label[for="medium"],
-#large ~ label[for="large"],
-#x-large ~ label[for="x-large"] {
+#x-s ~ label[for="x-s"],
+#s ~ label[for="s"],
+#m ~ label[for="m"],
+#l ~ label[for="l"],
+#x-l ~ label[for="x-l"] {
   background: rgb(0, 0, 0, 0.75);
   color: #fff;
   border-radius: 7px;
