@@ -7,14 +7,19 @@
 <div class="container mt-5">
 
     <h1>Sign Up</h1>
- 
+    <% if(hasErrors){ %>
+        <div class="alert alert-message">
+            <%- messages %>
+        </div>
+      <%  } %>
+    
   <div class="row">
     <div class="col-sm-8">
       <div class="card">
         <div class="card-body">
 
           <!-- Makes POST request to /register route -->
-          <form action="/signup" method="POST">
+          <form action="/admin/signup" method="POST">
             <div class="form-group">
               <label for="username">Username</label>
               <input type="name" class="form-control" name="username">
@@ -23,6 +28,7 @@
               <label for="password">Password</label>
               <input type="password" class="form-control" name="password">
             </div>
+            <input type="hidden" name="_csrf" value="<%- csrfToken %>">
             <button type="submit" class="btn btn-dark">SignUp</button>
           </form>
 
