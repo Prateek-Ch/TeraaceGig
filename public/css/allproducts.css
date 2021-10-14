@@ -139,6 +139,39 @@ html,body {
   width: 100% !important;
 }
 
+.foot{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  height: 8vh;
+  font-size: 3rem;
+  width: 100%;
+  position: absolute;
+}
+@media (max-width: 1680px){
+  .foot div{
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 950px){
+  .foot div{
+      font-size:2rem
+  }
+}
+@media (max-width: 650px){
+  .foot{
+      margin-top: 2vh;
+  }
+  .foot div{
+      font-size: 1.2rem;
+  }
+}
+
+
 @media (max-width:800px){
   #gallery{
       -webkit-column-count:2;

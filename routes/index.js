@@ -17,3 +17,6 @@ router.get('/images/:key',(req,res)=>{
 });
 
 module.exports = router;
+
+
+// https://technext.github.io/ruang-admin/index.html
