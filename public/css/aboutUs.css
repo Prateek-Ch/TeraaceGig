@@ -423,6 +423,9 @@
     .modal-open .modal{
         overflow-Y: hidden
     }
+    .col-lg-4{
+        width: 100% !important;
+    }
 }
 .col-lg-4{
     width: 33.33%;
