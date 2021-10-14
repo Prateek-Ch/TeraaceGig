@@ -1,23 +1,32 @@
-var express = require('express');
-var router = express.Router();
-var passport = require('passport');
-var csrf = require('csurf');
+<!--Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 
-var csrfProtection = csrf();
-router.use(csrfProtection);
+<<body>
 
-router.get('/',function(req,res){
-    var messages = req.flash('error');
-    res.render('signup',{csrfToken: req.csrfToken(), messages: messages, hasErrors: messages.length > 0})
-});
+<div class="container mt-5">
 
+    <h1>Sign Up</h1>
+ 
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
 
-router.post('/', passport.authenticate('local.signup',{
-    successRedirect: "/login",
-    failureRedirect: "/signup",
-    failureFlash: true
-  }));
+          <!-- Makes POST request to /register route -->
+          <form action="/signup" method="POST">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="name" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+            <button type="submit" class="btn btn-dark">SignUp</button>
+          </form>
 
-
-module.exports = router;
+        </div>
+      </div>
+    </div>
+</body>
