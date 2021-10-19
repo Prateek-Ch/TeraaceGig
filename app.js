@@ -61,6 +61,7 @@ var upload = require('./routes/upload');
 var productdetail = require('./routes/productdetail');
 var checkout = require('./routes/checkout');
 var lookbook = require('./routes/lookbook');
+var aboutus = require('./routes/aboutus');
 
 //Admin Routes
 var adminAddProducts = require('./routes/adminAddProduct');
@@ -76,6 +77,7 @@ app.use('/upload',upload);
 app.use('/productdetail',productdetail);
 app.use('/checkout',checkout);
 app.use('/lookbook',lookbook);
+app.use('/about',aboutus);
 app.use('/admin/addproduct',adminAddProducts);
 app.use('/admin/dashboard',adminDashboard);
 app.use('/admin/login',adminLogin);
