@@ -1247,8 +1247,8 @@ border: 3px rgb(255, 0, 0) solid;
   }
   .quantity__minus,
   .quantity__plus {
-    width:45px;
-    height: 45px;
+    width:40px;
+    height: 40px;
   }
   .roww{
     justify-content: flex-start;
