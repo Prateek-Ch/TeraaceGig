@@ -33,12 +33,9 @@
               <% data.forEach(function(p) { %>
               <div class="row">  
                 <div class="product">
-                  <img class="img-border" style="border-color: #8A0204;" src="/images/<%-p.img[0]%>"/>
+                  <a href="/productdetail/<%=p._id%>"><img class="img-border" style="border-color: #8A0204;" src="/images/<%-p.img[0]%>" >  </img> </a>
                   <div class="product-name"><%-p.title %></div>
-                  <div class="product-name"><%-p.description%></div>
-                  <div class="product-name"><%-p.category%></div>
-                  <div class="product-price"><%-p.price %></div>
-                  <a href="/productdetail/<%=p._id%>">View Product</a>
+                  
                 </div>
               </div>
             <% }) %>
