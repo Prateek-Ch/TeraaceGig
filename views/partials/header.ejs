@@ -38,17 +38,12 @@
       <% cart_products.forEach( p =>{ %>
     <ul class="shopping-cart-items" style="list-style-type: none;">
       <li class="clearfix">
+        <div class="cross"><a class="dropdown-item" href="/productdetail/removeAll/<%-p.item._id %>">X</a></div>
         <img src="images/<%-p.item.img[0]%>" alt="items" style="height: 80px; width: 80px;"/>
         <span class="item-name"><%-p.item.title %></span>
         <span class="item-price"><%-p.price %></span>
         <span class="item-quantity"><%-p.qty %></span>
-        <div class="btn-group">
-          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit<span class="caret"></span> </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/productdetail/reduce/<%-p.item._id %>">Remove One</a> <br>
-            <a class="dropdown-item" href="/productdetail/removeAll/<%-p.item._id %>">Remove All</a>
-          </div>
-        </div>
+        
 
       </li>
       
